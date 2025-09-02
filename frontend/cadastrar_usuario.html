@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário - Wayne Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="wayne-bg">
+    <img src="wayne-logo.svg" alt="Wayne Enterprises" class="wayne-logo">
+    <div class="wayne-card">
+        <div class="wayne-title">Cadastro de Usuário</div>
+        <div class="wayne-sub">Apenas administradores podem cadastrar novos usuários.</div>
+        <form id="formCadastro">
+            <input type="text" id="novoNome" placeholder="Nome do usuário" required><br>
+            <input type="password" id="novaSenha" placeholder="Senha" required><br>
+            <select id="novoTipo" required>
+                <option value="">Selecione o nível de acesso</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="gerente">Gerente</option>
+                <option value="admin">Administrador</option>
+            </select><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="msgCadastro"></div>
+        <button class="wayne-btn" onclick="window.location='dashboard.html'">Voltar ao Dashboard</button>
+    </div>
+    <script src="cadastrar_usuario.js"></script>
+</body>
+</html>

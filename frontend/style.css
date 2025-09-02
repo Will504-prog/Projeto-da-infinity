@@ -1,0 +1,296 @@
+/* Estilo especial para o dashboard Wayne Enterprises */
+.wayne-bg {
+    background: linear-gradient(120deg, #10131a 60%, #1a2233 100%);
+    min-height: 100vh;
+    color: #e0e6f0;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.wayne-logo {
+    width: 120px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 8px #0077ff88);
+}
+
+.wayne-card {
+    background: rgba(20, 24, 36, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 6px 32px #000a, 0 1.5px 0 #0077ff inset;
+    padding: 32px 28px;
+    margin: 18px 0;
+    max-width: 480px;
+    width: 100%;
+    border: 1.5px solid #0077ff44;
+    position: relative;
+}
+
+.wayne-title {
+    font-size: 2.1rem;
+    color: #ffe600;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #000a;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.wayne-sub {
+    color: #7ecbff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.wayne-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wayne-list li {
+    background: #181c2b;
+    margin: 8px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #0077ff;
+    box-shadow: 0 1px 6px #0004;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: column;
+}
+.wayne-list li b {
+    color: #ffe600;
+    font-size: 1.1rem;
+}
+.wayne-btn {
+    background: linear-gradient(90deg, #0077ff 60%, #ffe600 100%);
+    color: #10131a;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 12px 8px 0 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0077ff44;
+    transition: background 0.2s, color 0.2s;
+}
+.wayne-btn:hover {
+    background: linear-gradient(90deg, #ffe600 60%, #0077ff 100%);
+    color: #181c2b;
+}
+.wayne-footer {
+    margin-top: 40px;
+    color: #7ecbff;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.7;
+}
+body {
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    background: linear-gradient(120deg, #0a0d13 60%, #232526 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    animation: bgmove 12s linear infinite alternate;
+}
+
+@keyframes bgmove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100vw 100vh; }
+}
+
+h2, h3, h4 {
+    color: #ffe600;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 12px #000a, 0 0px 8px #ffe60044;
+}
+
+form {
+    background: rgba(20, 24, 36, 0.98);
+    padding: 32px 24px 24px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #000a, 0 0 0 2px #ffe60033;
+    max-width: 340px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1.5px solid #ffe60044;
+    position: relative;
+    overflow: hidden;
+}
+form:before {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px; right: -40px; bottom: -40px;
+    background: radial-gradient(circle, #ffe60022 0%, transparent 80%);
+    z-index: 0;
+    pointer-events: none;
+    animation: pulse 3s infinite alternate;
+}
+@keyframes pulse {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.5; }
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: #181c2b;
+    color: #ffe600;
+    box-shadow: 0 1px 6px #0004;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus {
+    border: 1.5px solid #ffe600;
+    box-shadow: 0 0 8px #ffe60088;
+}
+
+button, .wayne-btn {
+    background: linear-gradient(90deg, #232526 60%, #ffe600 100%);
+    color: #10131a;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 12px 8px 0 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #ffe60044, 0 0 0 2px #ffe60022;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+    letter-spacing: 1px;
+    outline: none;
+}
+button:hover, .wayne-btn:hover {
+    background: linear-gradient(90deg, #ffe600 60%, #0077ff 100%);
+    color: #181c2b;
+    box-shadow: 0 4px 24px #0077ff44, 0 0 0 2px #ffe60055;
+    transform: scale(1.04);
+}
+
+#msg {
+    color: #e53935;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 24px;
+    text-shadow: 0 1px 8px #000a;
+}
+
+/* Wayne Enterprises Dashboard e cartões */
+.wayne-bg {
+    background: linear-gradient(120deg, #10131a 60%, #1a2233 100%);
+    min-height: 100vh;
+    color: #e0e6f0;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    animation: bgmove 12s linear infinite alternate;
+}
+.wayne-logo {
+    width: 120px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 16px #ffe600cc) drop-shadow(0 0 8px #0077ff88);
+    animation: logoPulse 2.5s infinite alternate;
+}
+@keyframes logoPulse {
+    0% { filter: drop-shadow(0 0 8px #ffe60088) drop-shadow(0 0 4px #0077ff44); }
+    100% { filter: drop-shadow(0 0 24px #ffe600cc) drop-shadow(0 0 16px #0077ffcc); }
+}
+.wayne-card {
+    background: rgba(20, 24, 36, 0.98);
+    border-radius: 20px;
+    box-shadow: 0 6px 32px #000a, 0 1.5px 0 #ffe600 inset;
+    padding: 32px 28px;
+    margin: 18px 0;
+    max-width: 520px;
+    width: 100%;
+    border: 2px solid #ffe60044;
+    position: relative;
+    overflow: hidden;
+    animation: cardFadeIn 1.2s;
+}
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+}
+.wayne-title {
+    font-size: 2.1rem;
+    color: #ffe600;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #000a, 0 0 8px #ffe60044;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.wayne-sub {
+    color: #7ecbff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    text-align: center;
+    text-shadow: 0 1px 8px #0077ff44;
+}
+.wayne-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wayne-list li {
+    background: #181c2b;
+    margin: 8px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #ffe600;
+    box-shadow: 0 1px 6px #0004;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.2s, border 0.2s;
+    animation: fadeInLi 0.7s;
+}
+@keyframes fadeInLi {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: none; }
+}
+.wayne-list li b {
+    color: #ffe600;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 8px #ffe60044;
+}
+.wayne-btn {
+    /* já estilizado acima */
+}
+.wayne-footer {
+    margin-top: 40px;
+    color: #7ecbff;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.7;
+    text-shadow: 0 1px 8px #0077ff44;
+}
+
+/* Efeito especial para caixas de edição */
+#editarBox {
+    animation: cardFadeIn 0.7s;
+    box-shadow: 0 2px 16px #ffe60044;
+}

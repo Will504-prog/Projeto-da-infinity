@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Wayne Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="wayne-bg">
+    <img src="wayne-logo.svg" alt="Wayne Enterprises" class="wayne-logo">
+    <div class="wayne-card">
+        <div class="wayne-title">Wayne Enterprises</div>
+        <div class="wayne-sub">Painel de Segurança e Recursos</div>
+        <div id="userInfo"></div>
+        <h3 style="color:#7ecbff;">Áreas Restritas</h3>
+        <div id="areasRestritas" style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px;"></div>
+        <h3 style="color:#7ecbff;">Recursos Cadastrados</h3>
+        <ul id="recursos" class="wayne-list"></ul>
+        <div style="text-align:center;" id="botoesDashboard">
+            <button class="wayne-btn" onclick="window.location='recursos.html'">Gerenciar Recursos</button>
+            <button class="wayne-btn" onclick="window.location='index.html'">Sair</button>
+        </div>
+    </div>
+    <div class="wayne-footer">Sistema inspirado no universo Wayne Enterprises • Gotham City</div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciar Recursos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Gerenciar Recursos</h2>
+    <form id="recursoForm">
+        <input type="text" id="nome" placeholder="Nome do recurso" required><br>
+        <select id="categoria" required>
+            <option value="">Selecione a categoria</option>
+            <option value="Equipamento">Equipamento</option>
+            <option value="Veículo">Veículo</option>
+            <option value="Dispositivo de Segurança">Dispositivo de Segurança</option>
+        </select><br>
+        <input type="text" id="descricao" placeholder="Descrição"><br>
+        <button type="submit">Adicionar</button>
+    </form>
+    <div id="msg"></div>
+    <h3 style="color:#7ecbff;">Recursos por Categoria</h3>
+    <div id="recursosPorCategoria"></div>
+    <div id="editarBox" style="display:none;margin-top:24px;"></div>
+    <button onclick="window.location='dashboard.html'">Voltar</button>
+    <script src="recursos.js"></script>
+</body>
+</html>
