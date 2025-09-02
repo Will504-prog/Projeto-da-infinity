@@ -3,15 +3,15 @@ import json
 import bcrypt
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-# Caminho do banco de dados SQLite
+
 DB_PATH = "banco.db"
 
 
-# Inicializa o banco de dados e cria tabelas se não existirem
+
 def init_db():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    # Cria tabelas antes de qualquer SELECT
+   
     c.execute(
         """CREATE TABLE IF NOT EXISTS usuarios (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +28,7 @@ def init_db():
         descricao TEXT
     )"""
     )
-    # Garante que existe pelo menos um admin padrão
+  
     c.execute("SELECT COUNT(*) FROM usuarios WHERE tipo='admin'")
     if c.fetchone()[0] == 0:
         senha_hash = bcrypt.hashpw("admin".encode(), bcrypt.gensalt()).decode()
@@ -40,8 +40,7 @@ def init_db():
     conn.close()
 
 
-# Sistema de Gerenciamento de Segurança - Backend Simples
-# Python puro + SQLite
+
 class SimpleHandler(BaseHTTPRequestHandler):
     def do_PUT(self):
         if self.path.startswith("/recursos/"):
@@ -347,8 +346,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
         conn.close()
         return user[0] if user else None
 
-    # Definição duplicada de do_POST removida. Apenas a versão completa (acima) permanece.
-
+   
     def _set_headers(self, code=200):
         self.send_response(code)
         self.send_header("Content-type", "application/json")
@@ -365,7 +363,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
         self._set_headers()
         self.wfile.write(b"")
 
-    # As definições duplicadas de do_GET e do_POST foram removidas. Apenas a versão completa, que inclui /usuarios, foi mantida acima.
+ 
 
 
 if __name__ == "__main__":
