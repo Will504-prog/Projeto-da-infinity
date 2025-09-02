@@ -1,4 +1,4 @@
-// Função para validar acesso via backend
+
 async function validarAcesso(area) {
   const nome = localStorage.getItem("nome");
   const senha = prompt("Confirme sua senha para acessar a área:");
